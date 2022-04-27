@@ -1,0 +1,160 @@
+\documentclass[12pt,oneside,a4paper]{book} % This style for A4 format.
+
+\input{./AuxFiles/Packages}
+
+%Document settings
+\title{Implementing Budget and Grant Analysis for Public Sector Management}
+%%%%%%%%%%%%%%%Minor (or) Major report%%%%%%%%%%%%%%%
+%Uncomment \MinorProject line, if the report is for Minor project.
+\MinorProject
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Student Details%%%
+\stuNameA{Ayush Kumar}
+\stuUSNA{1RV18IS009}
+% \stuNameB{Nithin M}
+% \stuUSNB{1RV16EC006}
+% \stuNameC{Subrahmanya K N}
+% \stuUSNC{1RV16EC007}
+% \stuNameD{Subrahmanya K N}
+% \stuUSND{1RV16EC007}
+
+%%%Internal Guide%%%%
+\guideNameA{Vanishree K}
+\guideDesignationA{Assistant Professor}
+\guideDeptA{Dept. of ISE}
+\guideOrgA{RV College of Engineering}
+
+%%%CoGuide%%%%
+\guideNameB{Mohan George}
+\guideDesignationB{Development Manager}
+% \guideDeptB{SAP Labs India, Pvt Ltd}
+\guideOrgB{SAP Labs India, Pvt Ltd}
+
+%\guideNameC{Dr. Ramavenkateshwaran}
+%\guideDesignationC{Assistant Professor}
+%\guideDeptC{Dept. of ECE}
+%\guideOrgC{RV College of Engineering}
+
+\panelMemberA{__________}
+\panelMemberDesigA{_________}
+% \panelMemberB{Prof. P N Jayanthi}
+% \panelMemberDesigB{Assistant Professor}
+
+\Department[ISE]{Information Science and Engineering}
+
+\HOD{Dr. B.M Sagar}
+\Principal{Dr. K. N. Subramanya}
+
+\academicYear{2021-2022}
+
+\QRurl{}
+\QRurl{https://www.google.com}
+%%%%%%%%%%%%%%%%%%%For PG program%%%%%%%%%%%%%%%%%%%
+%%%Uncomment \pgProgram command and define appropriate values for \MastersIn{} and \pgProgramName{}
+
+%\pgProgram%
+% \MastersIn[M.Tech]{Master of Technology}
+% \pgProgramName{VLSI Design \& Embedded Systems}
+
+%%%%%%%%%%%%%%%%%%Draft report%%%%%%%%%%%%%%%%%%
+\DraftCopy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%Acronyms%%%%%%%%%%%%%%%%%%
+\newglossary[sym]{symbolList}{sym1}{sym2}{List of Symbols}
+% \newglossary[acr]{ac}{sym1}{sym2}{List of Symbols}
+\makeglossaries
+%Acronyms
+\loadglsentries{./AuxFiles/Glossaries}
+\renewcommand{\glspostdescription}{}% To remove dot at the end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%Bibliography%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=biber,style=ieee]{biblatex}
+%If backend is set to bibtex, then configure texmaker Bi(La)Tex with "bibtex %"
+\addbibresource{./AuxFiles/ProjectBib.bib}%Add bib file with extention
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%WaterMark%%%%%%%%%%%%%%%%%%%%%
+%%Use it only after Biblatex
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=gray!50,angle=0,scale=2,xpos=0,ypos=0]{\includegraphics[width=0.3\textwidth]{Figures/RVlogoVecW.png}}
+% \usepackage{background}
+% \backgroundsetup{scale=1, angle=0, firstpage = true, opacity=1, contents={
+% \begin{tikzpicture}[remember picture, overlay]
+% \node at ([yshift=0pt, xshift=0pt]current page.center){\includegraphics[width=0.3\textwidth]{Figures/RV_logoVec.png}};
+% \end{tikzpicture}
+% }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\maketitle
+	%\pagestyle{empty}
+	\newpage
+	\begin{spacing}{1.5}
+		\input{./CoverPages/Certificate}
+		\newpage
+		\input{./CoverPages/Declaration}
+		\newpage
+		\input{./CoverPages/Ack}
+		\newpage
+		\pagenumbering{roman}
+		\chapter*{Abstract}
+		\input{./CoverPages/Abstract}
+	\end{spacing}
+	\newpage
+	\pagestyle{fplain}
+	\begin{spacing}{1.5}
+		\tableofcontents
+	\end{spacing}
+	\newpage
+	\begin{spacing}{1.5}
+		\cleardoublepage
+		\addcontentsline{toc}{chapter}{\listfigurename}
+		\listoffigures
+	\end{spacing}
+	\newpage
+	\begin{spacing}{1.5}
+		\cleardoublepage
+		\addcontentsline{toc}{chapter}{\listtablename}
+		\listoftables
+	\end{spacing}
+	\newpage
+	% \printglossary[type=\acronymtype,title=Acronyms]
+	% \printglossary[type=symbolList, title= List of Symbols, toctitle=List of Symbols]
+
+	\newpage
+	\printglossary[type=\acronymtype, title= Abbreviations, toctitle=Abbreviations]
+
+
+	\mainmatter
+	\pagestyle{mplain}
+	\glsresetall
+	\begin{spacing}{1.5}
+		%Chapter 1 
+		\input{./Chapter1/chapter1-Intro}
+
+		%Chapter 2
+		% \input{./Chapter2/chapter2-Funda}
+
+		%Chapter 3
+		% \input{./Chapter3/chapter3-design}
+
+		%Chapter 4
+		% \input{./Chapter4/chapter4-implement}
+
+		% Chapter 5
+		% \input{./Chapter5/chapter5-result}
+
+		%Chapter 6
+		% \input{./Chapter6/chapter6-conclution}
+		
+		\backmatter
+		\clearpage
+		%\ifDrft{
+		%%Do Nothing
+		%}\else{
+		\printbibliography%
+		%}
+		%\printindex
+	\end{spacing}
+\end{document}
