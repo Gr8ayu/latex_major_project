@@ -42,6 +42,8 @@ efficiently while increasing public trust and
 support.
 
 
+
+
 % You are allowed to use figures or diagrams which can help in introducing the topic acknowledging the source. For example , if you are introducing a particular topic, an appropriate figure can be used. The figure should be referenced in the text as Figure. \ref{fig:universe} 
 \noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{Chapter1/Figures/img1.png}}
 % \begin{figure}[htb]
@@ -52,6 +54,15 @@ support.
 % \end{figure}
 
 % These guidelines are provided to formally expose you to the various ethical and technical issues involved in writing up your work and the format you are required to adhere to while submitting your project report.
+
+
+\section[Purpose]{\textbf{Purpose}}
+The study’s goal is to provide a enterprise solution with several functions of most public sector related
+governance and operations such as budget planning, expense tracking, and grant management all at once. The technologies are intended to effectively map real information to
+aid clients in going live by aiding in client creativity along with client assistance.
+
+
+
 
 \section[Motivation]{\textbf{Motivation}}
 The methods that government typically uses to
@@ -130,7 +141,15 @@ and well-being. Understand potential implications for culture,
 productivity, and the organization overall
 \end{enumerate}
 
-\section[Literature Review]{\textbf{Literature Review}}
+\section[Scope and relevance]{\textbf{Scope and relevance}}
+Organization in public sector manage fund, budget and grants from multiple sources.
+Allocation and consumption of funds are based on the needs of the organization.
+Proper tracking and analysis of funds is key to effective management of funds.
+Utilizing data driven approach helps in keeping track of available funds and their usage 
+to better plan expenses and predict the requirements.  
+
+
+\section[Literature Survey]{\textbf{Literature Survey}}
 % https://www.sap.com/documents/2017/01/a4303fdd-a07c-0010-82c7-eda71af511fa.html
 % https://help.sap.com/doc/367477e6c8b94385bcd6404f06bc4c86/1.0.0.3/en-US/SBP_10FP03_Application_Help_en.pdf
 
@@ -158,7 +177,7 @@ already been implemented. \cite*[]{Robert2014}
 
 Following are the feilds where the ERP system can be systematically incorporated in Public sector 
 
-\begin{table}[htb]
+\begin{table}[H]
     \fontsize{10}{12}\selectfont
     \caption{Public Sector}
     \label{c1:tab1}
@@ -226,7 +245,7 @@ Tyler Technologies’ solutions help governments and schools better serve their 
 Unanet for Government Contractors makes managing GovCon projects easy, providing perfect clarity and total control over day-to-day operations, forecasting, and planning. Purpose-built in-house by GovCon professionals, Unanet features support DCAA requirements at each stage. This vendor also integrations PSA and PPM with Financials to help organizations reliably plan, track, and manage projects and people. Unanet also offers ERP for professional services and A/E.
 
 % \ref{fig:ERPmillitary} 
-\begin{figure}[htb]
+\begin{figure}[H]
 \centering
 	\includegraphics[scale=0.5]{Chapter1/Figures/ERP3.png}	
 	\caption{ERP system used in millitary sector} 
@@ -234,7 +253,7 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
 \end{figure}
 
 % \ref{fig:ERPEducation} 
-\begin{figure}[htb]
+\begin{figure}[H]
 \centering
 	\includegraphics[scale=0.5]{Chapter1/Figures/ERP1.png}	
 	\caption{ERP system used in education sector}
@@ -242,7 +261,7 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
 \end{figure}
 
 % \ref{fig:ERPFinance} 
-\begin{figure}[htb]
+\begin{figure}[H]
 \centering
 	\includegraphics[scale=0.5]{Chapter1/Figures/ERP2.png}	
 	\caption{ERP system used in financial sector }
@@ -250,7 +269,7 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
 \end{figure}
 
 % \ref{fig:ERPHealthcare} 
-\begin{figure}[htb]
+\begin{figure}[H]
     \centering
         \includegraphics[scale=0.5]{Chapter1/Figures/ERP4.png}	
         \caption{ERP system used in healthcare sector }
@@ -258,11 +277,93 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
     \end{figure}
     
 
-
-
-
-
+    \section[Methodology and Architechtural Roadmap]{\textbf{Methodology and Architechtural Roadmap}}
+    % Discuss about the methodology you identified to execute the objectives of your project in brief. Methodology is a system of practices, techniques, procedures, and rules used to execute a particular project. You can elaborate the methodology in a later chapter. Here you can present in the form of a flow diagram and explain the methodology in a paragraph.
+    The steps adopted during the implementation of the Budget Planning Application can
+    be shown as a three stage pipeline as discussed below :
     
+    \begin{itemize}
+    \item Use of SAP UI5 and SAP Fiori for the deployment of the front-end system. A glimpse
+     of the Fiori LaunchPad is shown in the diagram below. It shows the catalogue
+     containing a suite of applications customized according to user preferences and
+     packages.
+     
+    \begin{figure}[H]
+        \centering
+            \includegraphics[scale=0.5]{Chapter1/Figures/fiori1.png}	
+            \caption{Fiori LaunchPad} 
+            \label{fig:fiorilaunchpad}
+    \end{figure}
+        
+    \item Setting up SAP S/4 HANA databases for collecting and capturing info received
+        through the programs. The database can analyze significant volume actual statistics
+        in a brief period.
+    \item Server-side code on the backend built upon SAP ABAP.
+    \item  To get an expedient solution for data representation, Core Data Services Views are
+        supported by the current relational databases and views.
+    \item  SAP NetWeaver Gateway Client and Open data Protocol are used toh link
+        backend with frontend resources.
+    \end{itemize}
+    
+        \begin{figure}[H]
+            \centering
+                \includegraphics[scale=0.5]{Chapter1/Figures/odata.png}	
+                \caption{SAP Odata Protocol} 
+                \label{fig:odataprotocol}
+        \end{figure}
+            
+        The figure above shows a high level framework of the different tiers and the connection
+        amongst all components. The Odata and Netweaver Gateway are mainly used for the
+        interlinking of front-end and backend services.
+    
+    
+        The features to be provided include-
+    
+        \begin{itemize}
+            \item Budget requests, reviews and adoption- Manage budgets in a single application
+    
+            \item Operating, capital and grants budgeting - A single application for all budget types
+    
+            \item User configuration - Tailor budget forms, process controls, reports and analytics to your unique budgeting requirements and adapt them to changing requirements
+            \item Personnel cost forecasting - Examine and plan personnel expenditures at a highly granular level to support budgeting, spending plans and collective bargaining
+            \item Modeling and analytics - Powerful modeling tools combined with the strength of SAP Business Objects for reporting, dashboards and ad hoc analysis
+    
+    \end{itemize}
+    
+    
+\section{Organization of Report}
+The report is organised into seven chapters which are as follows:
+
+{\bf Chapter 1} This section elaborates how the Budget Planning platform features distinctive functions
+that may greatly assist public sector finance departments with thousands/even millions of
+bank connections including maintaining transaction signatory info.
+
+{\bf Chapter 2} : This section reviews the prerequisites of the aim of the project. The functional
+and non-functional specifications for the implementation of the Budget Planner are discussed along
+with the software and hardware requirements.
+
+{\bf Chapter 3} : High level diagrams including the UML Class diagram, sequence diagram,
+architecture diagram, data flow diagram, etc are discussed in chapter 3 to comprehend the
+flow of information.
+
+{\bf Chapter 4} : Its operational specifics, including the norms utilised for code review, are
+detailed in this section. Furthermore, basic needs as well as solutions would be explained.
+
+{\bf Chapter 5} : The validation and verification of the various functionalities of the MBA app are
+detailed here. Unit testing, Regression testing and Integration testing are elaborated upon.
+
+{\bf Chapter 6 and 7} : Chapter six and seven mainly demonstrate the results and elaborate on the
+analysis obtained hence forth. An ultimate conclusion, along with limitations and future
+enhancement of the product are also presented.
+
+\section{Summary}
+Ultimately, this section illustrates the importance in streamlining financial client relations
+throughout the worldwide community. The Budget Planner enables consumers to
+oversee the procedure of creating / consuming funds by providing one-stop
+management of the lifespan for public sector. This software assists clients in becoming
+more self-sufficient by  lowering overall need on every type of assistance.
+
+
 % \subsubsection[Review types]{\textbf{Review types}}
 
 % The main types of literature reviews are: evaluative, exploratory, and instrumental. A fourth type, the systematic review, is often classified separately, but is essentially a literature review focused on a research question, trying to identify, appraise, select and synthesize all high-quality research evidence and arguments relevant to that question. A meta-analysis is typically a systematic review using statistical methods to effectively combine the data used on all selected studies to produce a more reliable result.

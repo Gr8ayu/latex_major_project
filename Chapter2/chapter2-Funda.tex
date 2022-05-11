@@ -1,41 +1,123 @@
+
 \chapter{Requirement specification}
 
-From Chapter 2 onwards, every chapter should start with an introduction paragraph. This paragraph should brief about the flow of the chapter. This introduction can be limited within 4 to 5 sentences. The chapter heading should be appropriately modified (a sample heading is shown for this chapter).But don't start the introduction paragraph in the chapters 2 to end with "This chapter deals with....". Instead you should bring in the highlights of the chapter in the introduction paragraph.
 
-\section{Contents of this chapter}
+\section{Specific Requirements}
+% From Chapter 2 onwards, every chapter should start with an introduction paragraph. This paragraph should brief about the flow of the chapter. This introduction can be limited within 4 to 5 sentences. The chapter heading should be appropriately modified (a sample heading is shown for this chapter).But don't start the introduction paragraph in the chapters 2 to end with "This chapter deals with....". Instead you should bring in the highlights of the chapter in the introduction paragraph.
+The feasibility study involves the sequence of actions carried out throughout the criteria
+analysis stage for creating a detailed report containing the Requirement Specification (SRS).
+Accuracy of experiments conducted at the current stage remains critical in planning. In a
+prototype relevant for specified demands, the criteria ought to be flexible and readily
+transferable. The Specification Document indeed comprehensive description of the program's
+intended capabilities. It lays the groundwork of future business evaluations.
+These following sections detail each program's unique needs.
 
-This chapter should discuss about the prerequisite learnings before the execution of the project. Organise and elaborate the theory and necessary fundamentals required for the execution of the project. You can use \verb|\subsections| and \verb|subsubsections| in this chapter.
-\section{Contents of this chapter}
-If a specific programming language is required for the project, a section can be allotted in this chapter to discuss it. 
-\section{Contents of this chapter}
-Tools used could be another possible section to discuss about the software tools used in the work. 
-\section{Contents of this chapter}
-The details in this chapter can be added in consultation with the project guide. For an internship based projects, subsections can be modified accordingly. 
+\subsection{Functional Requirement}
+A statement that provides insights about what a programme is expected to deliver is called
+functionalrequirement. The following are the functional requirements of this project
 
-\section{Use of Acronyms and Glossaries}
-Acronyms are nothing but the short form of regular repeated word. Say for example, you have a repeat word "Integrated Circuits" and you want to use a short form for it as "IC". For which you have to first define the word and use it wherever you wanted to refer it.
+\begin{itemize}
+    \item Budget data from the previous year of the plan year can be used as reference data.
+    \item Copy reference data to the individual FM account assignment.
+    \item Use the commitment and actual data from two years before the plan year. 
+    \item Commitment/Actual and Budget in Funds Management.
+    \item Reporting of the transaction data for the budget and the assigned funds.
+    \item Process control can be mapped using the status and tracking system .
+    
+\end{itemize}
 
-First, let's look at the definition, which has to be entered in \texttt{Glossaries.tex} under \texttt{CoverPages} directory.
-\begin{verbatim}
-%\newacronym{<Ref>}{<Short-Form>}{<Expanded word>}
-\newacronym{ic}{IC}{Integrated Circuits}
-\end{verbatim}
-In order to use the defined acronym, use the commands \verb|\gls{<Ref>}| as shown below
+\subsection{Non Functional Requirement}
+The needs that the software should fulfil but aren't really included over its major contribution
+are referred to as Non functional Requirements. Certain needs ought to be quantifiable to
+evaluate performance or progress during any point ofh execution. The Non Functional
+Requirements are listed below:
 
-As an example, call the definition with \verb|\gls{ic}| and the outcome of it is reflected as, \gls{ic}.
+\begin{itemize}
+    \item \textbf{Agreement} to certain SAP protocols and quality.
+    \item Threshold \textbf{performance} achievement.
+    \item Each individual unit must be developed in such a way so as to allow efficient
+    integration amongst one another and ensure \textbf{scalability} 
+    \item \textbf{Maintainable} and \textbf{Accessible}.
+    \item \textbf{Fault tolerant}.
+    \item \textbf{Compliance} to GDPR.
+    
 
-Note: For the First time, the expanded form appears along with the Short-form definition inside parenthesis. But when the \verb|\gls{}| is repeated, only Short-form appears inside the parenthesis.
+\end{itemize}
 
-Now, let's look at the definition of symbols. Follow the syntax to define the symbol first, inside \texttt{Glossaries.tex} under \texttt{CoverPages} directory.
-\begin{verbatim}
-%\newglossaryentry{<Ref>}{name=<Symbol>, description={<description about the symbol>}, type=<List type>}
-\newglossaryentry{rc}{name=$\tau$, description={Time constant}, type=symbolList}
-\end{verbatim}
+\subsection{Hardware Requirements}
 
-As an example, the rate of change is defined with \verb|\gls{rc}| and the outcome of it is reflected as, the rate of change is defined with \gls{rc}.
 
-\vspace{0.75cm}
+\begin{table}[H]
+    \fontsize{10}{12}\selectfont
+    \caption{Hardware Requirements}
+    \label{c1:hardware_requirements}
+    \begin{center}
+    \begin{tabular}{|p{7cm}|c|c|c|}
+        %\hline
+        %\multicolumn{4}{|c|}{Country List} \\
+        \hline
+        \textbf{Processor }& Intel Haswell CPU or IBM POWER8 CPU \\ \hline
+        \textbf{Hard Disk Partitions (System and Data)}    &   5 GigaBytes, 15 GigaBytes       \\\hline
+        \textbf{Drive}    &   Digital Versatile Disk- Read Only Memory         \\\hline
+        \textbf{Screen Display}    &   800 x 600 with 16-bit colors or higher  \\\hline
+        \textbf{Random Access Memory}    &   128G \\\hline
 
- \textbf{The chapters should not end with figures, instead bring the paragraph explaining about the figure at the end followed by a summary paragraph.}
+    \end{tabular}
+    \end{center}
+    \end{table}
+    
+\subsection{Software Requirements}
+Software requirements that are necessary include-
+\begin{itemize}
+    \item Operating System - Windows 7/greater or MacOS 10.12/greater.
+    \item DB : SAP HANA S/4
+    \item Programming Languages : SAP ABAP
+    \item Application Programming Interfaces : SAP NetWeaver Gateway Client and Open data protocol services.
+    \item ABAP Benchmarking Tool : SAP Benchmarking Tool
+    \item SAP HANA Cloud : SAP HANA Cloud
+    \item SAC : SAP Analytics Cloud
+    
+\end{itemize}
 
-After elaborating the various sections of the chapter (From Chapter 2 onwards), a summary paragraph should be written discussing the highlights of that particular chapter. This summary paragraph should not be numbered separately. This paragraph should connect the present chapter to the next chapter.
+% www.saptables.net/?schema=BusinessOne9.3
+
+
+
+
+
+
+% This chapter should discuss about the prerequisite learnings before the execution of the project. Organise and elaborate the theory and necessary fundamentals required for the execution of the project. You can use \verb|\subsections| and \verb|subsubsections| in this chapter.
+% \section{Contents of this chapter}
+% If a specific programming language is required for the project, a section can be allotted in this chapter to discuss it. 
+% \section{Contents of this chapter}
+% Tools used could be another possible section to discuss about the software tools used in the work. 
+% \section{Contents of this chapter}
+% The details in this chapter can be added in consultation with the project guide. For an internship based projects, subsections can be modified accordingly. 
+
+% \section{Use of Acronyms and Glossaries}
+% Acronyms are nothing but the short form of regular repeated word. Say for example, you have a repeat word "Integrated Circuits" and you want to use a short form for it as "IC". For which you have to first define the word and use it wherever you wanted to refer it.
+
+% First, let's look at the definition, which has to be entered in \texttt{Glossaries.tex} under \texttt{CoverPages} directory.
+% \begin{verbatim}
+% %\newacronym{<Ref>}{<Short-Form>}{<Expanded word>}
+% \newacronym{ic}{IC}{Integrated Circuits}
+% \end{verbatim}
+% In order to use the defined acronym, use the commands \verb|\gls{<Ref>}| as shown below
+
+% As an example, call the definition with \verb|\gls{ic}| and the outcome of it is reflected as, \gls{ic}.
+
+% Note: For the First time, the expanded form appears along with the Short-form definition inside parenthesis. But when the \verb|\gls{}| is repeated, only Short-form appears inside the parenthesis.
+
+% Now, let's look at the definition of symbols. Follow the syntax to define the symbol first, inside \texttt{Glossaries.tex} under \texttt{CoverPages} directory.
+% \begin{verbatim}
+% %\newglossaryentry{<Ref>}{name=<Symbol>, description={<description about the symbol>}, type=<List type>}
+% \newglossaryentry{rc}{name=$\tau$, description={Time constant}, type=symbolList}
+% \end{verbatim}
+
+% As an example, the rate of change is defined with \verb|\gls{rc}| and the outcome of it is reflected as, the rate of change is defined with \gls{rc}.
+
+% \vspace{0.75cm}
+
+%  \textbf{The chapters should not end with figures, instead bring the paragraph explaining about the figure at the end followed by a summary paragraph.}
+
+% After elaborating the various sections of the chapter (From Chapter 2 onwards), a summary paragraph should be written discussing the highlights of that particular chapter. This summary paragraph should not be numbered separately. This paragraph should connect the present chapter to the next chapter.

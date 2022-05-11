@@ -230,9 +230,14 @@
     \fancyhf{}%                            
     \renewcommand{\headrulewidth}{0.2pt}%    
     \renewcommand{\footrulewidth}{0.2pt}%
+    % \fancyheadoffset{2cm}
+    % \newgeometry{top=2cm}
     \fancyfoot[L] {\ifPG \@mastersInSF\, in \@PGprgName, Department of \@departmentSF \else Department of \@departmentLF\fi,\space\@acadYear}%
     \fancyfoot[R] {\thepage}%
-    \fancyhead[C] {RV College of Engineering\textsuperscript{\small\textregistered}, Bengaluru - 560059}%
+    % \fancyhead[C] {RV College of Engineering\textsuperscript{\small\textregistered}, Bengaluru - 560059}%
+    \fancyhead[L]
+    % {\noindent\makebox[\textwidth]{\includegraphics[width=\paperwidth]{Figures/}}}
+    {\includegraphics[width=6in,height=20.0mm]{Figures/rvheader.png}}
 }
 \fancypagestyle{emptypg}{%              
     \fancyhf{}%                            
