@@ -1,3 +1,4 @@
+\headheight=3cm
 \chapter{Introduction}
 
 \section[Introduction]{\textbf{Introduction}}
@@ -279,6 +280,8 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
 
     \section[Methodology and Architechtural Roadmap]{\textbf{Methodology and Architechtural Roadmap}}
     % Discuss about the methodology you identified to execute the objectives of your project in brief. Methodology is a system of practices, techniques, procedures, and rules used to execute a particular project. You can elaborate the methodology in a later chapter. Here you can present in the form of a flow diagram and explain the methodology in a paragraph.
+    
+    \subsection{Methodology}
     The steps adopted during the implementation of the Budget Planning Application can
     be shown as a three stage pipeline as discussed below :
     
@@ -330,7 +333,41 @@ Unanet for Government Contractors makes managing GovCon projects easy, providing
     
     \end{itemize}
     
+    \subsection{Architectural Roadmap}
     
+    % include architectural diagram
+    \begin{figure}[H]
+        \centering
+            % \includegraphics[scale=0.5]{Chapter1/Figures/arch1.jpeg}
+            \includegraphics[scale=0.5]{Chapter1/Figures/arch2.png}
+            \caption{Architectural Roadmap}
+            \label{fig:architectural}
+    \end{figure}
+
+
+    The SAP System Architecture follows a three tier architecture containing Presentation, Application and a database layer. Each of these layer  has it’s own software component. With this setup, the overall system can be distributed among a range of computers or it can also be in one system like MiniSAP which has all these components in one computer. A common configuration includes where in the database and the application server run concurrently in a single large computer. All the other application servers run on their computers. Let’s explain all these three components further so that you can develop a better understanding of the SAP system architecture.
+    
+    \subsubsection{Presentation Layer}
+    This is the view you see when you login into SAP from your computer. This is presentation layer that has been generated. The SAP GUI Software components ensure that the SAP system user interface is shown and that the user’s actions are passed to the application server for further processing.
+
+    \subsubsection{Application Layer}
+    The application layer is the one where the entire work is carried out for your. All your actions are processed at this place. This software component can have one or more than one based on the requirements and the processing needs of each and every organization.
+
+    The application server provides a range of services for the operation of the SAP system. The application servers processes are carried out through work processes. This is defined at the start of the SAP system. The work processes are components that are able to execute an application. One thing to note here is that each work process is registered as a user in the database system for the entire runtime of the SAP system.
+
+    \subsubsection{Database Layer}
+    Each SAP System Architecture will have a central database in which the entire data is stored. Everything, like the customer records, programs, just about anything which needs to be stored is maintained at this level.
+
+In a nutshell, any actions you do on the presentation layer is passed to the application layer for processing which would retrieve any relevant data from the database layer and the application layer processes the data and presents it to you via the presentation layer. This similar SAP System Architecture is followed by any ERP system.
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[scale=0.5]{Chapter1/Figures/arch1.jpeg}
+        \caption{Detailed Architectural Roadmap}
+        \label{fig:architectural_detail}
+\end{figure}
+
+
 \section{Organization of Report}
 The report is organised into seven chapters which are as follows:
 
